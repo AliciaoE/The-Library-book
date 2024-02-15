@@ -8,9 +8,9 @@ use Dotenv\Dotenv;
 class Database{
 
     private $host = 'localhost'; 
-    private $user = 'root';     
-    private $password;
-    private $dbname = 'library';       
+    private $user = 'root'; 
+    private $password;   
+    private $dbname = 'library'; 
 
     public function __construct() {
       $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
