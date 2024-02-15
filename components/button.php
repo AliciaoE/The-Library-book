@@ -1,3 +1,5 @@
 <button>
-    <?php echo $button_text; ?>
+    <?php 
+        echo $button_text; 
+    ?>
 </button>
