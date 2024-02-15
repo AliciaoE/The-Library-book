@@ -3,13 +3,20 @@ namespace Config;
 
 use PDO;
 use PDOException;
+use Dotenv\Dotenv;
 
 class Database{
 
-    private $host = 'localhost'; // 数据库主机地址
-    private $user = 'root';     // 用户名
-    private $password  = '';       
+    private $host = 'localhost'; 
+    private $user = 'root';     
+    private $password;
     private $dbname = 'library';       
+
+    public function __construct() {
+      $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+      $dotenv->load();
+      $this->password = $_ENV['DB_PASSWORD'];
+  }
 
     public function connection(){
 
