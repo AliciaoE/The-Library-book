@@ -23,10 +23,8 @@ $con->connection();
 </head>
 
 <body>
-  <h1>
-    Hello world!
-  </h1>
-  <?php require "./components/footer.php" ?>
+
+  <a href="./src/view/bookDetailsView.php">hole</a>
 </body>
 
 </html>
