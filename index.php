@@ -21,6 +21,7 @@ $con->connection();
   <link href="./resources/base.css" rel="stylesheet">
   <title>Document</title>
 </head>
+<?php require "./components/header.php" ?>
 
 <body>
   <h1>
