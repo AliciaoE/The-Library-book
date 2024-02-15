@@ -1,0 +1,56 @@
+.bookDetailsMain{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+}
+.bookDetailsContainer{
+    display: flex;
+    justify-content: center;
+    gap:10%;
+    width: 100%; 
+}
+
+.bookDetailsImage{
+    height: 400px;
+
+}
+
+.infoContainer{
+    display:flex;
+    flex-direction: column;
+    gap:5%;
+
+}
+
+.bookDetailsTitle{
+    font-size: 40px;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+}
+
+.bookDetailsAuthor{
+    font-size: 20px;
+    font-family: Inknut Antiqua, sans-serif;
+    font-weight: 300;
+    color: var(--text-gray);
+    margin-top: -15px;
+}
+
+.bookDetailsTextTitle{
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+}
+
+.bookDetailsText{
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-weight:400;
+    width: 400px;
+    word-wrap: break-word;
+}
