@@ -18,7 +18,7 @@ $con->connection();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./resources/base.css" rel="stylesheet">
+
   <title>Document</title>
 </head>
 
@@ -26,7 +26,8 @@ $con->connection();
   <h1>
     Hello world!
   </h1>
-  <?php require "./components/footer.php" ?>
+  <h2 class="border-2">Bye world!</h2>
+  <!-- <?php require "./components/bookform.php" ?> -->
 </body>
 
 </html>
