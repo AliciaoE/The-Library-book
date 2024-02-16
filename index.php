@@ -24,9 +24,9 @@ $con->connection();
 
 <body>
   <?php require "./components/header.php" ?>
-  <di>
-    <h2 class="center">Add a book to the library: </h2><br
-  </di>
+  <div>
+    <h2 class="center">Add a book to the library: </h2><br>
+  </div>
   <div>
     
   </div>
