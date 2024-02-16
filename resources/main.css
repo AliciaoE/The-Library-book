@@ -1,0 +1,65 @@
+.wrapper {
+  background-color: #fff;
+  border-radius: 0.625rem;
+  margin: 5.5rem auto;
+  max-width: 1200px;
+  padding: 2rem 4rem;
+}
+
+.wrapper h1 {
+  font-size: 1.8753rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.bookGrid {
+  display: grid;
+  gap: 0.625rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 3rem auto 2rem;
+}
+
+.bookCard {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.bookCard h3 {
+  color: var(--primary-dark);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  text-align: center;
+}
+
+.bookCard p {
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.pagination button {
+  background-color: transparent;
+  border: none;
+  color: var(--primary-dark);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration-line: underline;
+}

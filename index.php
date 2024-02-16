@@ -24,13 +24,7 @@ $con->connection();
 
 <body>
   <?php require "./components/header.php" ?>
-  <div>
-    <h2 class="center">Add a book to the library: </h2><br>
-  </div>
-  <div>
-    
-  </div>
-  <a href="./src/view/bookDetailsView.php">hole</a>
+  <?php require "./components/home_main.php" ?>
   <?php require "./components/footer.php" ?>
 </body>
 
