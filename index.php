@@ -26,6 +26,7 @@ $con->connection();
   <h1>
     Hello world!
   </h1>
+  <?php require "./components/home_main.php" ?>
   <?php require "./components/footer.php" ?>
 </body>
 
