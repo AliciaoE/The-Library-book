@@ -24,8 +24,9 @@
     </form>
  
     </div>
-</main>
-<?php require "../../components/footer.php" ?>
-</body>
 
+</main>
+
+</body>
+<?php require "../../components/footer.php" ?>
 </html>

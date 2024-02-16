@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
    align-items: center;
-   padding-top: 10%;
+   padding: 10%;
+   width: 100%;
 
  
 }
