@@ -21,11 +21,17 @@ $con->connection();
   <link href="./resources/base.css" rel="stylesheet">
   <title>Document</title>
 </head>
-<?php require "./components/header.php" ?>
 
 <body>
-
+  <?php require "./components/header.php" ?>
+  <di>
+    <h2 class="center">Add a book to the library: </h2><br
+  </di>
+  <div>
+    
+  </div>
   <a href="./src/view/bookDetailsView.php">hole</a>
+  <?php require "./components/footer.php" ?>
 </body>
 
 </html>

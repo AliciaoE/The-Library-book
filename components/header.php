@@ -12,4 +12,5 @@
             <a href="#">Login</a>
         </div>
     </div>
+    </div>
 </header>
