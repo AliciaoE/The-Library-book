@@ -3,12 +3,12 @@
     color: #F9F8F5;
     padding: 0.9rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     }
 
 .socialIcons {
-    margin-right: 2rem;
+    margin-right: 7rem;
 }
 
 .socialIcons img {

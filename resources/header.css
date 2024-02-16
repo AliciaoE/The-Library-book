@@ -3,17 +3,24 @@
     background-color: #F9F8F5;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 .logo img {
-    height: 50px; 
+    height: 600px;
 }
 
+.searchLogin {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+/* 
 .searchBox {
     display: flex;
-}
+    justify-content: space-between;
+} */
 
 .searchBox input {
     padding: 5px;

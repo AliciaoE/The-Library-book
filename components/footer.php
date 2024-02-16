@@ -1,14 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="footer" href="../resources/footer.css">
-    <title>Tu Sitio Web</title>
-</head>
-
-<body> -->
 
     <footer class="footer">
         <div class="socialIcons">
@@ -18,7 +8,3 @@
         </div>
         <p class="copyright">Copyright 2024® Todos los derechos reservados.</p>
     </footer>
-
-<!-- </body>
-
-</html> -->
