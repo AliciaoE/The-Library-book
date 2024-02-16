@@ -3,6 +3,7 @@
 @import url("bookDetails.css");
 @import url("button.css");
 @import url("header.css");
+>>>>>>> 229afa4baa0063eb1aad18db106fb090b0d79bc7
 
 :root {
   --primary-dark: #413F3F;
@@ -13,10 +14,16 @@
 
 * {
   box-sizing: border-box;
+<<<<<<< HEAD
+  font-family: "Inter", sans-serif;
+
+=======
   font-family: Inter, sans-serif;
+>>>>>>> 229afa4baa0063eb1aad18db106fb090b0d79bc7
 }
 
 body {
   font-size: 1rem;
   background-image: url(../assets/images/background-image.png);
+ 
 }
