@@ -1,15 +1,11 @@
 <?php
 
-// use Config\Database;
+
 use Controller\BookController;
 
-require_once __DIR__ . './../vendor/autoload.php';
+require_once __DIR__ . '../../vendor/autoload.php';
 
-// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-// $dotenv->load();
 
-// $con = new Database;
-// $con->connection();
 $controller = new BookController;
 $books = $controller->getBooks();
 
@@ -22,20 +18,17 @@ $books = $controller->getBooks();
     if(is_array($books)) :
         foreach($books as $book) :
         ?>
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                <!-- <?php
-                                    // Verifica si existe la ruta de la imagen en la base de datos
-                                    $bookImage= isset($book['book_image']) ? $book['book_image'] : 'https://placehold.co/110x180/png';
-                                    ?>
-                                    <img src='<?= $bookImage ?>' alt='Book Cover' class=''> -->
+                    <div class="bookCard" href='#'>
+                            <div class="bookCover">
+                                <a href='#' title='Book'> 
+                                    <img src='<?= $_ENV['DOMAIN'].$book['book_image']?>' alt='<?= $book['title'] ?> Cover'>
                                 </a>
                             </div>
-                            <h3><?= $book['title'] ?></h3>
-                            <p><?= $book['author'] ?></p>
-                        </div>
+                            <div class="bookInfo">
+                                <h3><?= $book['title'] ?></h3>
+                                <p><?= $book['author'] ?></p>
+                            </div>
+                            
                     </div>
         <?php
         endforeach;

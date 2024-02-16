@@ -1,7 +1,6 @@
 <?php
 
 use Config\Database;
-// use Controller\BookController;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -10,8 +9,7 @@ $dotenv->load();
 
 $con = new Database;
 $con->connection();
-// $controller = new BookController;
-// print_r($controller->getBooks());
+
 ?>
 
 

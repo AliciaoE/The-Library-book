@@ -1,17 +1,12 @@
 <?php
 
-// use Config\Database;
 use Controller\BookController;
 
-require_once __DIR__ . './../vendor/autoload.php';
+require_once __DIR__ . '../../vendor/autoload.php';
 
-// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-// $dotenv->load();
-
-// $con = new Database;
-// $con->connection();
 $controller = new BookController;
 $books = $controller->getBooks();
+
 
 ?>
 
