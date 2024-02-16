@@ -24,7 +24,7 @@ $con->connection();
 
 <body>
   <?php require "./components/header.php" ?>
-  <?php require "./components/home_main.php" ?>
+  <?php require "./components/homeMain.php" ?>
   <?php require "./components/footer.php" ?>
 </body>
 
