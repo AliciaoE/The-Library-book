@@ -9,6 +9,7 @@ require_once __DIR__ . '../../vendor/autoload.php';
 $controller = new BookController;
 $books = $controller->getBooks();
 
+
 ?>
 <main>
     <div class="wrapper">
@@ -19,10 +20,11 @@ $books = $controller->getBooks();
         foreach($books as $book) :
         ?>
                     <div class="bookCard" href='#'>
-                            <div class="bookCover">
-                                <a href='#' title='Book'> 
+                            <div class="bookCover"> 
+                                <a href="src/view/bookDetailsView.php?id=<?= $book['id']?>" title='View Book' data-toggle='tooltip'>
                                     <img src='<?= $_ENV['DOMAIN'].$book['book_image']?>' alt='<?= $book['title'] ?> Cover'>
                                 </a>
+
                             </div>
                             <div class="bookInfo">
                                 <h3><?= $book['title'] ?></h3>
