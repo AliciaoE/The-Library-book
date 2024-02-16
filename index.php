@@ -23,11 +23,8 @@ $con->connection();
 </head>
 
 <body>
-  <h1>
-    Hello world!
-  </h1>
-  <h2 class="border-2">Bye world!</h2>
-  <!-- <?php require "./components/bookform.php" ?> -->
+
+  <a href="./src/view/bookDetailsView.php">hole</a>
 </body>
 
 </html>

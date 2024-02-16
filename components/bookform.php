@@ -1,4 +1,4 @@
-<form action="" method="post">
+<!-- <form class="bookForm" action="" method="post">
   <fieldset>
     <legend>Add a new book</legend>
     <div class="inputLeftSide">
@@ -26,4 +26,4 @@
       </p>
     </div>
   </fieldset>
-</form>
+</form> -->

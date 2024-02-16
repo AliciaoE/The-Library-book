@@ -1,5 +1,59 @@
-form {
+.bookFormMain{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+}
+legend {
+    font-size: 2rem;
+    margin-left: -3rem;
+} 
+.bookFormContainer {
+    padding: 3rem 10em;
+}
+
+.inputLeftSide {
+    width: 20%;
     display: flex;
     flex-direction: column;
+}
+
+.inputRightSide {
+    width: 30%;
+}
+
+.inputLeftSide input, .inputRightSide textarea {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1em 5rem 0.5rem 1rem;
+    color: var(--text-light-gray);
+    margin: 10px 0px;
+}
+.inputLeftSide label, .inputRightSide label {
+    color: var(--text-gray);
+}
+
+.inputRightSide input {
+    margin: 10px 0px;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    width: 90%;
+}
+.buttonSection {
+    display: flex;
+    width: 30%;
     justify-content: space-evenly;
 }
+.buttonSection button{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+}
+
