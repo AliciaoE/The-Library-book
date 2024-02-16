@@ -27,7 +27,7 @@ $con->connection();
     Hello world!
   </h1>
   <h2 class="border-2">Bye world!</h2>
-  <!-- <?php require "./components/bookform.php" ?> -->
+<?php require "./components/bookform.php" ?>
 </body>
 
 </html>
