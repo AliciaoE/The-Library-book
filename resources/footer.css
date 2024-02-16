@@ -5,7 +5,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 50rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     }
 
 .socialIcons {

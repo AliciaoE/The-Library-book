@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
 
-    <link href="./resources/base.css" rel="stylesheet">
-    <link href="./resources/form.css" rel="stylesheet">
+    <link href="../../resources/base.css" rel="stylesheet">
+    <link href="../../resources/form.css" rel="stylesheet">
 </head>
-<body class="custom-body">
+<body >
+<?php require "../../components/header.php" ?>
+    <main  class="customMain"> 
 <div class="containerForm">
     <h1 >Sign in</h1>
     <form action="login.php" method="post">
@@ -18,10 +20,12 @@
         <label class=textForm for="password">Password:</label><br>
         <input class="inputAnswer" type="password" id="password" name="password" required><br><br>
 
-        <input class="bottomForm" type="submit" value="log in">
+        <input class="bottomForm" type="submit" value="Log in">
     </form>
-   
+ 
     </div>
+</main>
+<?php require "../../components/footer.php" ?>
 </body>
-<?php require "./components/footer.php" ?>
+
 </html>
