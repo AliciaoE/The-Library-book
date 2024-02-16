@@ -22,7 +22,7 @@
             </p>
         </aside>
     </section>
-    <a href="../../index.php">
+    <a class="buttonDetails" href="../../index.php">
         Back
     </a>
 </div>
