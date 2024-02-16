@@ -18,14 +18,19 @@ $con->connection();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="output.css" rel="stylesheet">
+  <link href="./resources/base.css" rel="stylesheet">
   <title>Document</title>
 </head>
 
 <body>
-  <h1 class="border-2 text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <?php require "./components/header.php" ?>
+  <di>
+    <h2 class="center">Add a book to the library: </h2><br
+  </di>
+  <div>
+    
+  </div>
+  <a href="./src/view/bookDetailsView.php">hole</a>
   <?php require "./components/footer.php" ?>
 </body>
 

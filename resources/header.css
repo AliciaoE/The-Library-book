@@ -1,0 +1,55 @@
+
+.header {
+    background-color: #F9F8F5;
+    padding: 10px 50px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchLogin {
+    display: flex;
+}
+
+.logo img {
+    height: 6rem;
+
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+}
+
+
+.searchBox input {
+    padding: 1rem;
+    margin-right: 5rem;
+    border: 0.01rem solid var(--primary-dark);
+    border-radius: 1rem;
+}
+
+.searchBox button {
+    background-color: var(--primary-light);
+    cursor: pointer;
+    border: none;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap:  1rem;
+}
+
+.login a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem; 
+}
+
+.loginIcon {
+    margin: 1rem;
+    display: flex;
+    
+}
