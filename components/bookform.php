@@ -1,23 +1,29 @@
-<form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-    <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-        Username
-      </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+<form action="" method="post">
+  <fieldset>
+    <legend>Add a new book</legend>
+    <div class="inputLeftSide">
+      <p>
+        <label for="title">Title*</label></br>
+        <input type="text" name="title" value="" id="title" placeholder="Title" required/>
+      </p>
+      <p>
+        <label for="author">Author*</label><br/>
+        <input type="text" name="author" value="" id="author" placeholder="Author" required />
+      </p>
+      <p>
+        <label for="isbn">ISBN*</label><br/>
+        <input type="text" name="isbn" value="" id="isbn" placeholder="ISBN" required/>
+      </p>
     </div>
-    <div class="mb-6">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-        Password
-      </label>
-      <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
-      <p class="text-red-500 text-xs italic">Please choose a password.</p>
+    <div class="inputRightSide">
+      <p>
+        <label for="description">Description*</label><br/>
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="Add a description"></textarea>
+      </p>
+      <p>
+        <label for="image">Image*</label><br/>
+        <input type="file" name="uploadFile" id="uploadFile">
+      </p>
     </div>
-    <div class="flex items-center justify-between">
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-        Sign In
-      </button>
-      <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-        Forgot Password?
-      </a>
-    </div>
-  </form>
+  </fieldset>
+</form>
