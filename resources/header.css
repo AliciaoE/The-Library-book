@@ -1,0 +1,41 @@
+
+.header {
+    background-color: #F9F8F5;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    height: 600px;
+}
+
+.searchLogin {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+/* 
+.searchBox {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.searchBox input {
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+}
+
+.searchBox button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
