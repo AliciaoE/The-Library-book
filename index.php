@@ -9,6 +9,7 @@ $dotenv->load();
 
 $con = new Database;
 $con->connection();
+
 ?>
 
 
