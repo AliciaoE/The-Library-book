@@ -1,6 +1,14 @@
+<?php
+// require_once __DIR__ . '/vendor/autoload.php';
+
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+
+?>
+
 <header class="header">
     <div class="logo">
-        <img src="assets/images/logo.svg" alt="Logo">
+        <img src="<?= $_ENV['DOMAIN']?>The-Library-book/assets/images/logo.svg" alt="Logo">
     </div>
     <div class="searchLogin">
         <div class="searchBox">
