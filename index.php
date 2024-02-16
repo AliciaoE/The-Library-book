@@ -23,10 +23,11 @@ $con->connection();
 </head>
 
 <body>
-  <h1 class="bg-blue-200 text-[#50d71e]">
+  <h1>
     Hello world!
   </h1>
   <h2 class="border-2">Bye world!</h2>
+  <!-- <?php require "./components/bookform.php" ?> -->
 </body>
 
 </html>
