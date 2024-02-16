@@ -23,6 +23,6 @@
         </aside>
     </section>
     <a href="../../index.php">
-        <?php require __DIR__ . "/button.php"; ?>
+        Back
     </a>
 </div>

@@ -1,8 +1,6 @@
 <?php
 
   require_once __DIR__ . '../../../vendor/autoload.php';
-
-  $button_text = "Back";
 ?>
 
 
@@ -17,7 +15,9 @@
 </head>
 
 <body>
+  <?php require "../../components/header.php"; ?>
   <?php require "../../components/bookDetails.php"; ?>
+  <?php require "../../components/footer.php"; ?>
 </body>
 
 </html>
