@@ -22,11 +22,11 @@
 
         <input class="bottomForm" type="submit" value="Log in">
     </form>
- 
+    <?php require "../../components/footer.php" ?>
     </div>
 
 </main>
 
 </body>
-<?php require "../../components/footer.php" ?>
+
 </html>
