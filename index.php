@@ -9,6 +9,7 @@ $dotenv->load();
 
 $con = new Database;
 $con->connection();
+
 ?>
 
 
@@ -24,7 +25,7 @@ $con->connection();
 
 <body>
   <?php require "./components/header.php" ?>
-  <?php require "./components/homeMain.php" ?>
+  <?php require "./src/view/homeMain.php" ?>
   <?php require "./components/footer.php" ?>
 </body>
 
