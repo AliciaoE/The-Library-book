@@ -26,4 +26,14 @@ class BookController
     public function getTotalBooksCount() {
         return $this->model->getTotalBooksCount();
     }
+
+    public function searchBooks($keyword, $page) {
+        $limit = 10;
+        $offset = ($page - 1) * $limit;
+        return $this->model->searchBooks($keyword, $offset, $limit);
+    }
+
+    public function getTotalBooksSearched($keyword) {
+        return $this->model->getTotalBooksSearched($keyword);
+    }
 }
