@@ -33,6 +33,16 @@ $totalPages = ceil($totalBooks / 10);
                             <div class="bookInfo">
                                 <h3><?= $book['title'] ?></h3>
                                 <p><?= $book['author'] ?></p>
+                                <!-- Admin case
+                            
+                                Deberíamos envolverlo dentro de un if como "if ($isAdmin)"
+                            -->    
+                            <div class="icons-row">      
+                                <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN']?>The-Library-book/assets/images/edit-icon.svg" alt="Edit"></a>
+                            
+                                <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN']?>The-Library-book/assets/images/delete-icon.svg" alt="Delete"></a>
+                            </div>
+                                 <!-- Aquí cerraríamos el if del Admin case-->
                             </div>
                             
                     </div>
