@@ -13,6 +13,24 @@
   line-height: normal;
 }
 
+.title-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.add-button {
+  align-items: center;
+}
+
+.add-link {
+  align-items: center;
+  color: var(--primary-dark);
+  display: flex;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
 .bookCover {
   height: 10rem;
   width: 6.25rem;
@@ -68,10 +86,14 @@
 }
 
 .pagination,
-.icons-row {
+.icons-row,
+.add-button {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+
+.pagination {
   justify-content: flex-end;
 }
 

@@ -17,12 +17,21 @@ $totalPages = ceil($totalBooks / 10);
 ?>
 <main>
     <div class="wrapper">
-                <h1>Find your next literary adventure</h1>
-                <div class="bookGrid">
-                <?php
-    if(is_array($books)) :
-        foreach($books as $book) :
-        ?>
+        <div class="title-group">
+          <h1>Find your next literary adventure</h1>
+            <!-- Admin case:          
+            Deberíamos envolver este bloque dentro de un if como "if ($isAdmin)"
+            -->    
+            <span class="add-button">      
+                <a href="components/bookform.php?id=<?= $book['id'] ?>" class="add-link"><img src="<?= $_ENV['DOMAIN']?>The-Library-book/assets/images/add-icon.svg" alt="Add a new book">Add a new book</a>
+            </span>
+            <!-- Aquí cerraríamos el if del Admin case-->
+            </div>
+            <div class="bookGrid">
+             <?php
+                if(is_array($books)) :
+                    foreach($books as $book) :
+                    ?>
                     <div class="bookCard" href='#'>
                             <div class="bookCover"> 
                                 <a href="src/view/bookDetailsView.php?id=<?= $book['id']?>" title='View Book' data-toggle='tooltip'>
@@ -33,22 +42,20 @@ $totalPages = ceil($totalBooks / 10);
                             <div class="bookInfo">
                                 <h3><?= $book['title'] ?></h3>
                                 <p><?= $book['author'] ?></p>
-                                <!-- Admin case
-                            
-                                Deberíamos envolverlo dentro de un if como "if ($isAdmin)"
-                            -->    
-                            <div class="icons-row">      
-                                <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN']?>The-Library-book/assets/images/edit-icon.svg" alt="Edit"></a>
-                            
-                                <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN']?>The-Library-book/assets/images/delete-icon.svg" alt="Delete"></a>
-                            </div>
+                                <!-- Admin case:
+                                Deberíamos envolver este bloque dentro de un if como "if ($isAdmin)"
+                                -->    
+                                <div class="icons-row">      
+                                    <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN']?>The-Library-book/assets/images/edit-icon.svg" alt="Edit"></a>
+                                
+                                    <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN']?>The-Library-book/assets/images/delete-icon.svg" alt="Delete"></a>
+                                </div>
                                  <!-- Aquí cerraríamos el if del Admin case-->
-                            </div>
-                            
+                            </div>        
                     </div>
-        <?php
-        endforeach;
-        ?>
+            <?php
+            endforeach;
+            ?>
         <?php else: ?>
             <h3><?= $books ?></h3>
     <?php endif; ?>
