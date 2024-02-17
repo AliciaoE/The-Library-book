@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once __DIR__ . '../../../vendor/autoload.php';
 
 use Model\Login;
@@ -16,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "La conexio a la base de datos funciona!!.";
     } else {
         echo "Error: No se pudo establecer conexion a la base de datos.";
+        // echo "<p> aquí dentro el mensaje de error </p>";
     }
     
 

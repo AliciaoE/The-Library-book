@@ -13,6 +13,19 @@
   line-height: normal;
 }
 
+
+
+.bookCover {
+  width: 6.25rem;
+  height: 10rem;
+}
+
+
+.bookCover img {
+  width: 100%;
+  height: 100%;
+}
+
 .bookGrid {
   display: grid;
   gap: 0.625rem;
@@ -22,11 +35,21 @@
 }
 
 .bookCard {
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1rem;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.bookInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:0.5rem;
+  height: 3.75rem;
 }
 
 .bookCard h3 {
@@ -36,6 +59,7 @@
   font-weight: bold;
   line-height: normal;
   text-align: center;
+  margin:0
 }
 
 .bookCard p {

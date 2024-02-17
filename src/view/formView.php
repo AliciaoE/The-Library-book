@@ -13,7 +13,8 @@ require_once '../controller/loginController.php';
 
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 
 <head>
     <meta charset="UTF-8">

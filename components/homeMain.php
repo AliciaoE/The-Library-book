@@ -1,140 +1,43 @@
+<?php
+
+
+use Controller\BookController;
+
+require_once __DIR__ . '../../vendor/autoload.php';
+
+
+$controller = new BookController;
+$books = $controller->getBooks();
+
+
+?>
 <main>
     <div class="wrapper">
                 <h1>Find your next literary adventure</h1>
                 <div class="bookGrid">
-                    <!-- Start bookCard -->
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                    <img src='https://placehold.co/110x180/png' alt='' class=''>
+                <?php
+    if(is_array($books)) :
+        foreach($books as $book) :
+        ?>
+                    <div class="bookCard" href='#'>
+                            <div class="bookCover"> 
+                                <a href="src/view/bookDetailsView.php?id=<?= $book['id']?>" title='View Book' data-toggle='tooltip'>
+                                    <img src='<?= $_ENV['DOMAIN'].$book['book_image']?>' alt='<?= $book['title'] ?> Cover'>
                                 </a>
-                            </div>
-                            <h3>Titular ficticio</h3>
-                            <p>Autor ficticio</p>
-                        </div>
-                    </div>
-                    <!-- End bookCard -->
 
-                    <!-- NOTA: HABRÁ QUE BORRAR TODOS LOS "bookCard" DE ABAJO EN CUANTO HAGAMOS LA ITERACIÓN DEL ARRAY DE DATOS -->
-
-                    <!-- Start bookCard -->
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                    <img src='https://placehold.co/110x180/png' alt='' class=''>
-                                </a>
                             </div>
-                            <h3>Titular ficticio</h3>
-                            <p>Autor ficticio</p>
-                        </div>
-                    </div>
-                    <!-- End bookCard -->
-                    <!-- Start bookCard -->
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                    <img src='https://placehold.co/110x180/png' alt='' class=''>
-                                </a>
+                            <div class="bookInfo">
+                                <h3><?= $book['title'] ?></h3>
+                                <p><?= $book['author'] ?></p>
                             </div>
-                            <h3>Titular ficticio</h3>
-                            <p>Autor ficticio</p>
-                        </div>
+                            
                     </div>
-                    <!-- End bookCard -->
-                    <!-- Start bookCard -->
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                    <img src='https://placehold.co/110x180/png' alt='' class=''>
-                                </a>
-                            </div>
-                            <h3>Titular ficticio</h3>
-                            <p>Autor ficticio</p>
-                        </div>
-                    </div>
-                    <!-- End bookCard -->
-                    <!-- Start bookCard -->
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                    <img src='https://placehold.co/110x180/png' alt='' class=''>
-                                </a>
-                            </div>
-                            <h3>Titular ficticio</h3>
-                            <p>Autor ficticio</p>
-                        </div>
-                    </div>
-                    <!-- End bookCard -->
-                    <!-- Start bookCard -->
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                    <img src='https://placehold.co/110x180/png' alt='' class=''>
-                                </a>
-                            </div>
-                            <h3>Titular ficticio</h3>
-                            <p>Autor ficticio</p>
-                        </div>
-                    </div>
-                    <!-- End bookCard -->
-                    <!-- Start bookCard -->
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                    <img src='https://placehold.co/110x180/png' alt='' class=''>
-                                </a>
-                            </div>
-                            <h3>Titular ficticio</h3>
-                            <p>Autor ficticio</p>
-                        </div>
-                    </div>
-                    <!-- End bookCard -->
-                    <!-- Start bookCard -->
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                    <img src='https://placehold.co/110x180/png' alt='' class=''>
-                                </a>
-                            </div>
-                            <h3>Titular ficticio</h3>
-                            <p>Autor ficticio</p>
-                        </div>
-                    </div>
-                    <!-- End bookCard -->
-                    <!-- Start bookCard -->
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                    <img src='https://placehold.co/110x180/png' alt='' class=''>
-                                </a>
-                            </div>
-                            <h3>Titular ficticio</h3>
-                            <p>Autor ficticio</p>
-                        </div>
-                    </div>
-                    <!-- End bookCard -->
-                    <!-- Start bookCard -->
-                    <div class="bookCard">
-                        <div href='#'>
-                            <div class=''>
-                                <a href='#' title='Book'>
-                                    <img src='https://placehold.co/110x180/png' alt='' class=''>
-                                </a>
-                            </div>
-                            <h3>Titular ficticio</h3>
-                            <p>Autor ficticio</p>
-                        </div>
-                    </div>
-                    <!-- End bookCard -->
+        <?php
+        endforeach;
+        ?>
+        <?php else: ?>
+            <h3><?= $books ?></h3>
+    <?php endif; ?>
                 </div>
         <div class="pagination">
             <button class="pagination-btn">1</button>
