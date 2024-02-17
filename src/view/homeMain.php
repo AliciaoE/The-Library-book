@@ -9,6 +9,10 @@ require_once __DIR__ . '../../../vendor/autoload.php';
 $controller = new BookController;
 $books = $controller->getBooks();
 
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+$books = $controller->getBooksByPage($page);
+$totalBooks = $controller->getTotalBooksCount();
+$totalPages = ceil($totalBooks / 10);
 
 ?>
 <main>
@@ -40,10 +44,9 @@ $books = $controller->getBooks();
     <?php endif; ?>
                 </div>
         <div class="pagination">
-            <button class="pagination-btn">1</button>
-            <button class="pagination-btn">2</button>
-            <button class="pagination-btn">3</button>
-            <button class="pagination-btn">Next</button>
+            <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                <a href="?page=<?= $i ?>" class="pagination-btn"><?= $i ?></a>
+            <?php endfor; ?>
         </div>
     </div>
 </main>
