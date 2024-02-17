@@ -1,21 +1,15 @@
 <?php
 
-require_once __DIR__ . '../../../vendor/autoload.php';
+  require_once __DIR__ . '../../../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../..');
 $dotenv->load();
-
-use controller\loginController;
-
-require_once '../controller/loginController.php';
 
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,26 +18,25 @@ require_once '../controller/loginController.php';
     <link href="../../resources/base.css" rel="stylesheet">
     <link href="../../resources/form.css" rel="stylesheet">
 </head>
+<body >
+<?php require "../../components/header.php" ?>
+    <main  class="customMain"> 
+<div class="containerForm">
+    <h1 >Sign in</h1>
+    <form action="login.php" method="post">
+        <label  for="username">Username:</label><br>
+        <input class="inputAnswer" type="text" id="username" name="username" required><br><br>
 
-<body>
-    <?php require "../../components/header.php" ?>
-    <main class="customMain">
-        <div class="containerForm">
+        <label class=textForm for="password">Password:</label><br>
+        <input class="inputAnswer" type="password" id="password" name="password" required><br><br>
 
-            <h1>Sign in</h1>
-            <form action="../model/login.php" method="POST">
-                <label for="username">Username:</label><br>
-                <input class="inputAnswer" type="text" id="username" name="username" required><br><br>
-
-                <label class=textForm for="password">Password:</label><br>
-                <input class="inputAnswer" type="password" id="password" name="password" required><br><br>
-
-                <input class="bottomForm" type="submit" value="Log in">
-            </form>
-
-        </div>
-    </main>
+        <input class="bottomForm" type="submit" value="Log in">
+    </form>
     <?php require "../../components/footer.php" ?>
+    </div>
+
+</main>
+
 </body>
 
 </html>
