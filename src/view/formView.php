@@ -36,4 +36,5 @@ $dotenv->load();
 </main>
 <?php require "../../components/footer.php" ?>
 </body>
+
 </html>

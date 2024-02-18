@@ -22,7 +22,7 @@ if ($action === 'login') {
 }
 
 // Incluir el formulario de inicio de sesión
-include 'src/views/FormView.php';
+
 ?>
 
 <!DOCTYPE html>

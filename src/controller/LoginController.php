@@ -23,15 +23,10 @@ class LoginController
                 if ($this->model->login($username, $password)) {
                     // Contraseña correcta
                     echo "<script>alert('Contraseña Ok.');</script>";
-                } else {
-                    // Contraseña incorrecta
-                    echo "<script>alert('Contraseña fail.');</script>";
-                }
-            } else {
-                // Datos de inicio de sesión incompletos
-                echo "<script>alert('Por favor, complete todos los campos.');</script>";
+                } 
             }
         }
     }
-} 
+}
+
 ?>
