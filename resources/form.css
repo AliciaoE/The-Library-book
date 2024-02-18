@@ -3,7 +3,8 @@
 
     display: flex;
     justify-content: center;
-    padding: 10%;
+   align-items: center;
+   padding-top: 10%;
 
  
 }
@@ -17,6 +18,9 @@ gap: 1.75rem;
 border-radius: 0.625rem;
 border: 1px solid var(--text-gray, #6E6D6C);
 background: #FFF;
+
+margin: 5%
+
 }
 
 .bottomForm{ display: flex;

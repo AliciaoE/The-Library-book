@@ -1,17 +1,29 @@
 <?php
 
 use Config\Database;
+use Controller\LoginController;
+use Model\LoginModel;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+$action = $_GET['action'] ?? '';
+
 $con = new Database;
-$con->connection();
+$db = $con->connection();
+
+$loginModel = new LoginModel($db);
+$loginController = new LoginController($loginModel);
+
+if ($action === 'login') {
+    $loginController->processLogin();
+}
+
+// Incluir el formulario de inicio de sesión
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
