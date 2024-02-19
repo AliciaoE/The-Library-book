@@ -6,13 +6,14 @@
     border-radius: 10px;
     display:flex;
     flex-direction: column;
+    margin-top: 3rem;
 }
 legend {
     font-size: 2rem;
     margin-left: -3rem;
 } 
 .bookFormContainer {
-    padding: 3rem 10em;
+    padding: 1rem 5rem;
 }
 
 .inputLeftSide {
@@ -56,4 +57,3 @@ legend {
     border-radius: 5px;
     padding: 1rem 2rem;
 }
-

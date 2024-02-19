@@ -1,16 +1,29 @@
 <?php
 
 use Config\Database;
+use Controller\LoginController;
+use Model\LoginModel;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$con = new Database;
-$con->connection();
-?>
+$action = $_GET['action'] ?? '';
 
+$con = new Database;
+$db = $con->connection();
+
+$loginModel = new LoginModel($db);
+$loginController = new LoginController($loginModel);
+
+if ($action === 'login') {
+    $loginController->processLogin();
+}
+
+// Incluir el formulario de inicio de sesión
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +36,9 @@ $con->connection();
 </head>
 
 <body>
-
-  <a href="./src/view/bookDetailsView.php">hole</a>
+  <?php require "./components/header.php" ?>
+  <?php require "./src/view/homeMain.php" ?>
+  <?php require "./components/footer.php" ?>
 </body>
 
 </html>

@@ -10,7 +10,7 @@ class Database{
     private $host = 'localhost'; 
     private $user = 'root'; 
     private $password;   
-    private $dbname = 'biblioteca'; 
+    private $dbname = 'library'; 
 
     public function __construct() {
       $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
@@ -22,7 +22,6 @@ class Database{
 
         try {
             $pdo = new PDO("mysql:host={$this->host}; dbname={$this->dbname}", $this->user, $this->password);
-            echo ("conexión ha  sido exitosa");
             return $pdo;
           } catch(PDOException $e) {
             echo "Connection failed: " . $e->getMessage();

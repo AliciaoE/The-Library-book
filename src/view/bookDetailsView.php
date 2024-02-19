@@ -2,7 +2,9 @@
 
   require_once __DIR__ . '../../../vendor/autoload.php';
 
-  $button_text = "Back";
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../..');
+$dotenv->load();
+
 ?>
 
 
@@ -17,7 +19,9 @@
 </head>
 
 <body>
+  <?php require "../../components/header.php"; ?>
   <?php require "../../components/bookDetails.php"; ?>
+  <?php require "../../components/footer.php"; ?>
 </body>
 
 </html>
