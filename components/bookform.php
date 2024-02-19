@@ -11,23 +11,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $author = $_POST["author"];
     $isbn = $_POST["isbn"];
     $description = $_POST["description"];
-    $imagePath = '';
+    $image_path = '';
+
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] === UPLOAD_ERR_OK) {
-        $upload_dir = __DIR__ . '/../../assets/images/books/';
-        $file_name = uniqid() . '_' . basename($_FILES['photo']['name']);
+        $upload_dir = __DIR__ . '/../assets/images/books/';
+        $file_name = basename($_FILES['photo']['name']);
         $target_path = $upload_dir . $file_name;
 
         if (move_uploaded_file($_FILES['photo']['tmp_name'], $target_path)) {
-            // La imagen se ha subido correctamente
-            $image_path = $file_name;
+            $image_path = 'The-Library-book/assets/images/books/' . $file_name;
         } else {
-            // Error al subir la imagen
             echo "<script>alert('Error al subir la imagen.');</script>";
         }
     }
 
-
-    // Agregar el libro a la base de datos
+   
     $result = $controller->addBook($title, $author, $isbn, $description, $image_path);
     if ($result) {
         echo "<script>alert('Libro agregado correctamente.'); window.location.href = '../../';</script>";
@@ -36,9 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-
-
 ?>
+
+
+
 
 <main class="bookFormMain">
     <form id="bookform" method="post" enctype="multipart/form-data">
@@ -61,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </p>
                     <p>
                         <label for="uploadPhoto">Image*</label><br />
-                        <input type="file" name="photo" id="uploadPhoto" class="" />
+                        <input type="file" name="photo" id="uploadPhoto"/>
                     </p>
                 </section>
 
