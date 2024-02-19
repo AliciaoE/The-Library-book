@@ -32,7 +32,7 @@ class LoginModel
             return true; 
         } else {
             echo "<script>alert('Incorrect username or password. Please try again.');</script>";
-            echo "<script>window.location = 'http://localhost/The-Library-book//src/view/formView.php';</script>";
+            echo "<script>window.location = '" . $_ENV['DOMAIN'] . "The-Library-book/src/view/formView.php';</script>";
             exit();
         }
     }

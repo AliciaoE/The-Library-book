@@ -27,14 +27,14 @@ $isLoggedIn = isset($_SESSION['last_name']);
 if ($action === 'login') {
     // Si el usuario está logueado y trata de acceder a la página de login, redirigirlo a otra página
     if ($isLoggedIn) {
-        header("Location: http://localhost/The-Library-book/index.php?action=logout");
+        header("Location: " . $_ENV['DOMAIN'] . "The-Library-book/index.php?action=logout");
         exit();
     }
     $loginController->processLogin();
 } elseif ($action === 'logout') {
     // Si el usuario intenta hacer logout, destruir la sesión y redirigirlo a la página de login
     session_destroy();
-    header("Location: http://localhost/The-Library-book/index.php?action=login");
+    header("Location: " . $_ENV['DOMAIN'] . "The-Library-book/index.php?action=login");
     exit();
 }
 ?>
