@@ -23,7 +23,7 @@ $dotenv->load();
 <main class="customMain">
     <div class="containerForm">
         <h1>Sign in</h1>
-        <form action="index.php?action=login" method="post">
+        <form action="../../index.php?action=login" method="post">
             <label for="username">Username:</label><br>
             <input class="inputAnswer" type="text" id="username" name="username" required><br><br>
 

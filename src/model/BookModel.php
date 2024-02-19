@@ -51,4 +51,15 @@ class BookModel
         $statement->execute();
         return $statement->fetchColumn();
     }
+
+
+    public function addBook($title, $author, $isbn, $description, $image_path) {
+        $statement = $this->pdo->prepare("INSERT INTO library.books (title, author, isbn, description, book_image) VALUES (:title, :author, :isbn, :description, :image_path)");
+        $statement->bindValue(':title', $title, PDO::PARAM_STR);
+        $statement->bindValue(':author', $author, PDO::PARAM_STR);
+        $statement->bindValue(':isbn', $isbn, PDO::PARAM_STR);
+        $statement->bindValue(':description', $description, PDO::PARAM_STR);
+        $statement->bindValue(':image_path', $image_path, PDO::PARAM_STR);
+        return $statement->execute();
+    }
 }
