@@ -1,10 +1,10 @@
 # Proyecto: The Library Book
 
-## Descripción
+## Descripción 🗃
 
-Bienvenido a nuestro místico proyecto de lectura de cartas. Esta aplicación web te sumergirá en el fascinante mundo de la adivinación, proporcionando orientación para el pasado, presente y futuro a través de las cartas. Descubre las respuestas que el universo tiene para ti.
+¡Esta es la página oficial de la biblioteca de tu barrio más cercano! Hemos actualizado nuestro estilo y, con la ayuda de unas grandes programadoras, hemos podido organizar todos nuestros libros en un programa web. Con esta mejora, podremos tener mejor gestionado nuestro inventario, como también es más fácil para el usuario manejar sus reservas.
 
-Es un trabajo en grupo, usando metodologías ágiles, desarrollado con un CRUD con PHP vanilla conectado a una base de datos MySQL y con una arquitectura MVC (modelo-vista-controlador). 
+Es un proyecto en grupo desde el bootcamp FACTORIA F5, usando metodologías ágiles, desarrollado con un CRUD con PHP vanilla conectado a una base de datos MySQL y con una arquitectura MVC (modelo-vista-controlador). 
 
 ## Competencias técnicas
 
@@ -30,16 +30,16 @@ Es un trabajo en grupo, usando metodologías ágiles, desarrollado con un CRUD c
 - Figma 
 - Trello
 
-## ## Vista Previa 🌠 📸
+## ## Vista Previa 🌠 
 
-![Pagina-principal](<./public/img-readme/Captura de pantalla 2024-01-26 094522-1.png>)
-![Tiradas](<./public/img-readme/Captura de pantalla 2024-01-26 094543-1.png>)
-![Pagina-tiradas](<./public/img-readme/Captura de pantalla 2024-01-26 094614.png>)
-![Historial](<./public/img-readme/Captura de pantalla 2024-01-26 094645.png>)
+![Pagina-principal]()
+![User-login]()
+![Pagina-libro]()
+![Pagina-administrador]()
 
-## Instrucciones de Configuración y Ejecución 🚀
+## Instrucciones para la Ejecución 💿
 
-1. Clona este repositorio a tu máquina local con el siguente comando: "git clone https://github.com/zohra-b/Sakura-Tarot.git" .
-2. Instala las dependencias usando `npm install`.
-3. Inicia la aplicación con `npm start`.
-4. Inicia el servidor Json con `json-server --watch db.json`.
+1. Clona este repositorio a tu máquina local con el siguente comando: "git clone https://github.com/AliciaoE/The-Library-book"
+2. Instala las dependencias usando `composer install`.
+3. Inicia la aplicación con `composer start`.
+4. Inicia los tests con `./vendor/bin/phpunit tests`.
