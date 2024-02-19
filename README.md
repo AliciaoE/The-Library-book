@@ -33,10 +33,10 @@ Es un proyecto en grupo desde el bootcamp FACTORIA F5, usando metodologías ági
 
 ## ## Vista Previa 🌠 
 
-![Pagina-principal]('/assets/images/screenshots/index.png')
-![User-login]('/assets/images/screenshots/login.png')
-![Pagina-formulario]('/assets/images/screenshots/formulario-libros.png')
-![Pagina-detalles]('assets/images/screenshots/detalles-libro.png')
+![Pagina-principal](/assets/images/screenshots/index.png)
+![User-login](/assets/images/screenshots/login.png)
+![Pagina-formulario](/assets/images/screenshots/formulario-libros.png)
+![Pagina-detalles](/assets/images/screenshots/detalles-libro.png)
 
 ## Instrucciones para la Ejecución 💿
 
