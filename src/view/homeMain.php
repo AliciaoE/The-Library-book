@@ -41,7 +41,7 @@ $totalPages = ceil($totalBooks / 10);
             <!-- Admin case:-->
             <?php if ($isAdmin) : ?> 
             <span class="add-button">
-                <a href="components/bookform.php?id=<?= $book['id'] ?>" class="add-link"><img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/add-icon.svg" alt="Add a new book">Add a new book</a>
+                <a href="components/bookform.php" class="add-link"><img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/add-icon.svg" alt="Add a new book">Add a new book</a>
             </span>
             <?php endif; ?>
             <!-- Aquí cerramos el if del Admin case-->
@@ -82,7 +82,7 @@ $totalPages = ceil($totalBooks / 10);
 
             <div class="pagination">
                 <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
-                <a href="?page=<?= $i ?>&isAdmin=<?= isset($_SESSION['role']) && $_SESSION['role'] === 'Administrador' ? 'true' : 'false' ?>&<?= session_name() ?>=<?= session_id() ?>" class="pagination-btn"><?= $i ?></a>
+                <a href="?page=<?= $i ?>&isAdmin=<?= isset($_SESSION['role']) && $_SESSION['role'] === 'Administrador' ? 'false' : 'true' ?>&<?= session_name() ?>=<?= session_id() ?>" class="pagination-btn"><?= $i ?></a>
                 <?php endfor; ?>
             </div>
     </div>
