@@ -40,10 +40,12 @@ Es un proyecto en grupo desde el bootcamp FACTORIA F5, usando metodologías ági
 
 ## Instrucciones para la Ejecución 💿
 
-1. Clona este repositorio a tu máquina local con el siguente comando: "git clone https://github.com/AliciaoE/The-Library-book"
-2. Instala las dependencias usando `composer install`.
-3. Inicia la aplicación con `composer start`.
-4. Inicia los tests con `./vendor/bin/phpunit tests`.
+1. Clona este repositorio a tu máquina local con el siguente comando: `"git clone https://github.com/AliciaoE/The-Library-book"`
+2. Añadir dicho repositorio en la ruta `/Applications/XAMPP/htdocs`, o en su defecto, si es Mac, utilizando MAMP
+3. Instala las dependencias usando `composer install`.
+4. Inicia la aplicación con `composer start`.
+5. Debes tener instalada la base de datos y su tabla, llamada [library](/assets/images/database/library-db.sql)
+6. Inicia los tests con `composer test`.
 
 ##  📧 Contacto
 Este proyecto está creado por Débora Menezes, Arleny Medina, Stefania Desogus, Alicia Ontiveros y Johanna Cuevas.
