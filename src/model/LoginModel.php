@@ -36,5 +36,17 @@ class LoginModel
             exit();
         }
     }
+
+    public function isAdmin($last_name)
+    {
+        $query = $this->db->prepare("SELECT role FROM users WHERE last_name = :last_name");
+        $query->bindParam(":last_name", $last_name);
+        $query->execute();
+
+        $user = $query->fetch(PDO::FETCH_ASSOC);
+
+        return ($user && $user['role'] === 'Administrador');
+    }
+    
 }
 ?>
