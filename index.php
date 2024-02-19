@@ -21,6 +21,7 @@ if ($action === 'login') {
     $loginController->processLogin();
 }
 
+
 // Incluir el formulario de inicio de sesión
 
 ?>
