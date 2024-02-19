@@ -1,6 +1,7 @@
 <?php
 
   require_once __DIR__ . '../../../vendor/autoload.php';
+  require_once __DIR__ . '../../../components/session_check.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../..');
 $dotenv->load();
@@ -26,17 +27,14 @@ $dotenv->load();
         <form action="../../index.php?action=login" method="post">
             <label for="username">Username:</label><br>
             <input class="inputAnswer" type="text" id="username" name="username" required><br><br>
-
             <label class=textForm for="password">Password:</label><br>
             <input class="inputAnswer" type="password" id="password" name="password" required><br><br>
 
             <input class="bottomForm" type="submit" value="Log in">
         </form>
     </div>
-    <?php require "../../components/footer.php" ?>
 
 </main>
-
+<?php require "../../components/footer.php" ?>
 </body>
-
 </html>

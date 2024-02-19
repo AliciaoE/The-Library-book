@@ -1,4 +1,8 @@
 <?php
+// index.php
+
+// Iniciar la sesión
+session_start();
 
 use Config\Database;
 use Controller\LoginController;
@@ -17,12 +21,22 @@ $db = $con->connection();
 $loginModel = new LoginModel($db);
 $loginController = new LoginController($loginModel);
 
+// Verificar si el usuario está logueado
+$isLoggedIn = isset($_SESSION['last_name']);
+
 if ($action === 'login') {
+    // Si el usuario está logueado y trata de acceder a la página de login, redirigirlo a otra página
+    if ($isLoggedIn) {
+        header("Location: http://localhost/The-Library-book/index.php?action=logout");
+        exit();
+    }
     $loginController->processLogin();
+} elseif ($action === 'logout') {
+    // Si el usuario intenta hacer logout, destruir la sesión y redirigirlo a la página de login
+    session_destroy();
+    header("Location: http://localhost/The-Library-book/index.php?action=login");
+    exit();
 }
-
-// Incluir el formulario de inicio de sesión
-
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +53,7 @@ if ($action === 'login') {
   <?php require "./components/header.php" ?>
   <?php require "./src/view/homeMain.php" ?>
   <?php require "./components/footer.php" ?>
+
 </body>
 
 </html>
