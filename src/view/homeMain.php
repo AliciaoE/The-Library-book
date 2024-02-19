@@ -82,7 +82,10 @@ $totalPages = ceil($totalBooks / 10);
 
             <div class="pagination">
                 <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
-                <a href="?page=<?= $i ?>&isAdmin=<?= isset($_SESSION['role']) && $_SESSION['role'] === 'Administrador' ? 'false' : 'true' ?>&<?= session_name() ?>=<?= session_id() ?>" class="pagination-btn"><?= $i ?></a>
+                    <?php
+                    $isAdminParam = $isAdmin ? 'false' : 'true';
+                    ?>
+                    <a href="?page=<?= $i ?>&isAdmin=<?= $isAdminParam ?>" class="pagination-btn"><?= $i ?></a>
                 <?php endfor; ?>
             </div>
     </div>
