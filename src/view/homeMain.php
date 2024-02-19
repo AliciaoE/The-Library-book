@@ -12,7 +12,7 @@ $books = $controller->getBooks();
 
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
-$isAdmin = false;
+$isAdmin = isset($_GET['isAdmin']) && $_GET['isAdmin'] === 'true';
 
 if (isset($_SESSION['last_name'])) {
     $loginModel = new LoginModel($db); 
@@ -82,7 +82,7 @@ $totalPages = ceil($totalBooks / 10);
 
             <div class="pagination">
                 <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
-                <a href="?page=<?= $i ?>&<?= session_name() ?>=<?= session_id() ?>" class="pagination-btn"><?= $i ?></a>
+                <a href="?page=<?= $i ?>&isAdmin=<?= isset($_SESSION['role']) && $_SESSION['role'] === 'Administrador' ? 'true' : 'false' ?>&<?= session_name() ?>=<?= session_id() ?>" class="pagination-btn"><?= $i ?></a>
                 <?php endfor; ?>
             </div>
     </div>
