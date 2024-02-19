@@ -21,6 +21,7 @@ if ($action === 'login') {
     $loginController->processLogin();
 }
 
+
 // Incluir el formulario de inicio de sesión
 
 ?>
@@ -32,6 +33,8 @@ if ($action === 'login') {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./resources/base.css" rel="stylesheet">
+   
+
   <title>Document</title>
 </head>
 

@@ -40,10 +40,11 @@
     display: flex;
     align-items: center;
     gap:  1rem;
+    text-decoration: none;
+    color:inherit;
 }
 
-.login a {
-    text-decoration: none;
+.login span {
     color: #333;
     font-weight: bold;
     font-size: 1.2rem; 

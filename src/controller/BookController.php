@@ -36,4 +36,9 @@ class BookController
     public function getTotalBooksSearched($keyword) {
         return $this->model->getTotalBooksSearched($keyword);
     }
+
+
+    public function addBook($title, $author, $isbn, $description, $image_path) {
+        return $this->model->addBook($title, $author, $isbn, $description, $image_path);
+    }
 }
