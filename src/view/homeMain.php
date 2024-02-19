@@ -1,4 +1,6 @@
 <?php
+// session_start();
+
 
 
 use Controller\BookController;
@@ -21,6 +23,7 @@ if (isset($_GET['search']) && isset($_GET['keyword'])) {
 }
 
 $totalPages = ceil($totalBooks / 10);
+$isAdmin = isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true;
 ?>
 
 
@@ -32,9 +35,11 @@ $totalPages = ceil($totalBooks / 10);
             <!-- Admin case:          
             Deberíamos envolver este bloque dentro de un if como "if ($isAdmin)"
             -->
+            <?php if ($isAdmin): ?>
             <span class="add-button">
                 <a href="components/bookform.php?id=<?= $book['id'] ?>" class="add-link"><img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/add-icon.svg" alt="Add a new book">Add a new book</a>
             </span>
+            <?php endif; ?>
             <!-- Aquí cerraríamos el if del Admin case-->
         </div>
         <div class="bookGrid">
@@ -55,11 +60,12 @@ $totalPages = ceil($totalBooks / 10);
                             <!-- Admin case:
                                 Deberíamos envolver este bloque dentro de un if como "if ($isAdmin)"
                                 -->
-                            <div class="icons-row">
-                                <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/edit-icon.svg" alt="Edit"></a>
-
-                                <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/delete-icon.svg" alt="Delete"></a>
-                            </div>
+                                <?php if ($isAdmin): ?>
+    <div class="icons-row">
+        <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/edit-icon.svg" alt="Edit"></a>
+        <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/delete-icon.svg" alt="Delete"></a>
+    </div>
+<?php endif; ?>
                             <!-- Aquí cerraríamos el if del Admin case-->
                         </div>
                     </div>
