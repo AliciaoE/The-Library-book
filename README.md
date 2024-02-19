@@ -1,4 +1,4 @@
-# Proyecto: The Library Book
+# 📚 Proyecto: The Library Book 📚
 
 ## Descripción 🗃
 
@@ -44,3 +44,6 @@ Es un proyecto en grupo desde el bootcamp FACTORIA F5, usando metodologías ági
 2. Instala las dependencias usando `composer install`.
 3. Inicia la aplicación con `composer start`.
 4. Inicia los tests con `./vendor/bin/phpunit tests`.
+
+##  📧 Contacto
+Este proyecto está creado por Débora Menezes, Arleny Medina, Stefania Desogus, Alicia Ontiveros y Johanna Cuevas.
