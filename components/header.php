@@ -9,17 +9,29 @@
             </button>
             <input type="search" autocomplete="off" label="Search" placeholder="Search by title/ author" name="keyword" value="<?php echo isset($_GET['keyword']) ? $_GET['keyword'] : '' ?>">
         </form>
-        <?php if(isset($_SESSION['last_name'])): ?>
-    <a class="login" href="<?php echo $_ENV['DOMAIN'] ?>The-Library-book/logout.php">
-        <img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/user-icon.svg" alt="user">
-        <span>Logout</span>
-    </a>
-<?php else: ?>
-    <a class="login" href="<?php echo $_ENV['DOMAIN'] ?>The-Library-book/src/view/formView.php">
-        <img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/user-icon.svg" alt="user">
-        <span>Login</span>
-    </a>
-<?php endif; ?>
+        <?php
+
+    $isLoggedIn = isset($_SESSION['last_name']);
+?>
+<div class="login">
+<img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/user-icon.svg" alt="user">
+            <?php if ($isLoggedIn): ?>
+                <a href="#" onclick="confirmLogout()">Logout</a>
+                <script>
+                    function confirmLogout() {
+                        var confirmLogout = confirm("¿Seguro que quieres cerrar sesión?");
+                        if (confirmLogout) {
+                            window.location.href = 'index.php?action=logout';
+                        }
+                    }
+                </script>
+            <?php else: ?>
+                
+                <a href="src/view/formView.php">Login</a>
+            <?php endif; ?>
+</div>
+
+
     </div>
 </header>
 
