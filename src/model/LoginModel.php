@@ -45,7 +45,7 @@ class LoginModel
 
         $user = $query->fetch(PDO::FETCH_ASSOC);
 
-        return ($user && $user['role'] === 'Administrador');
+        return ($user && $user['role'] === 'Administrator');
     }
     
 }

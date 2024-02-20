@@ -16,7 +16,7 @@
 <div class="login">
 <img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/user-icon.svg" alt="user">
             <?php if ($isLoggedIn): ?>
-                <a href="#" onclick="confirmLogout()">Logout</a>
+                <a class="loginLogout" href="#" onclick="confirmLogout()">Logout</a>
                 <script>
                     function confirmLogout() {
                         var confirmLogout = confirm("¿Seguro que quieres cerrar sesión?");
@@ -27,7 +27,7 @@
                 </script>
             <?php else: ?>
                 
-                <a href="src/view/formView.php">Login</a>
+                <a class="loginLogout" href="src/view/formView.php">Login</a>
             <?php endif; ?>
 </div>
 
