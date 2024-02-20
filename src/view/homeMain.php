@@ -2,7 +2,7 @@
 
 
 use Controller\BookController;
-use Model\LoginModel;
+use Model\UserModel;
 
 require_once __DIR__ . '../../../vendor/autoload.php';
 
@@ -15,7 +15,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $isAdmin = isset($_GET['isAdmin']) && $_GET['isAdmin'] === 'true';
 
 if (isset($_SESSION['last_name'])) {
-    $loginModel = new LoginModel($db); 
+    $loginModel = new UserModel($db); 
     $last_name = $_SESSION['last_name'];
     $isAdmin = $loginModel->isAdmin($last_name);
 }

@@ -5,8 +5,8 @@
 session_start();
 
 use Config\Database;
-use Controller\LoginController;
-use Model\LoginModel;
+use Controller\UserController;
+use Model\UserModel;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -18,8 +18,8 @@ $action = $_GET['action'] ?? '';
 $con = new Database;
 $db = $con->connection();
 
-$loginModel = new LoginModel($db);
-$loginController = new LoginController($loginModel);
+$loginModel = new UserModel($db);
+$loginController = new UserController($loginModel);
 
 // Verificar si el usuario está logueado
 $isLoggedIn = isset($_SESSION['last_name']);

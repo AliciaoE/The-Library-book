@@ -1,20 +1,32 @@
 <?php
 
 namespace Controller;
+
 use Model\UserModel;
 
 class UserController 
 {
     private $model;
 
-    public function __construct()
+    public function __construct($model)
     {
-        $this->model = new UserModel;
+        $this->model = $model;
     }
 
-    public function getUsers()
+    public function processLogin()
     {
-        return ($this->model->getUsers()) ?
-        $this->model->getUsers() : "No se ha encontrado ningún usuario";
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $username = $_POST['username'] ?? '';
+            $password = $_POST['password'] ?? '';
+
+            if (!empty($username) && !empty($password)) {
+                if ($this->model->login($username, $password)) {
+                    // Contraseña correcta
+                    echo "<script>alert('You are now logged in. Welcome!');</script>";
+                } 
+            }
+        }
     }
 }
+
+?>

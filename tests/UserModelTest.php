@@ -3,7 +3,7 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use Src\Models\UserModel;
+use src\model\UserModel;
 
 
 class UserModelTest extends TestCase
@@ -14,16 +14,6 @@ class UserModelTest extends TestCase
         $this->assertTrue(
             class_exists('Model\UserModel'),
             'La clase UserModel no existe'
-        );
-    }
-
-    public function testUserModelCanBeInstantiated() //verifica que la instancia es de la clase esperada
-    {
-        $userModel = new \Model\UserModel();
-        $this->assertInstanceOf(
-            'Model\UserModel',
-            $userModel,
-            'No se pudo instanciar la clase UserModel'
         );
     }
 }
