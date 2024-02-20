@@ -1,5 +1,11 @@
 <?php
 
+$isAdmin = false; 
+
+if (isset($_SESSION['role']) && $_SESSION['role'] === 'Administrador') {
+    $isAdmin = true;
+}
+
 
 use Controller\BookController;
 use Model\LoginModel;
@@ -12,7 +18,6 @@ $books = $controller->getBooks();
 
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
-$isAdmin = isset($_GET['isAdmin']) && $_GET['isAdmin'] === 'true';
 
 if (isset($_SESSION['last_name'])) {
     $loginModel = new LoginModel($db); 
@@ -83,9 +88,12 @@ $totalPages = ceil($totalBooks / 10);
             <div class="pagination">
                 <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
                     <?php
-                    $isAdminParam = $isAdmin ? 'false' : 'true';
+                    $link = "?page=$i";
+                    if ($isAdmin) {
+                        $link .= "&isAdmin=true";
+                    }
                     ?>
-                    <a href="?page=<?= $i ?>&isAdmin=<?= $isAdminParam ?>" class="pagination-btn"><?= $i ?></a>
+                    <a href="<?= $link ?>" class="pagination-btn"><?= $i ?></a>
                 <?php endfor; ?>
             </div>
     </div>
