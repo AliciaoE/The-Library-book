@@ -1,0 +1,29 @@
+.footer {
+  margin-top: auto;
+}
+
+.footerContainer {
+  align-items: center;
+  background-color: #413f3f;
+  color: #f9f8f5;
+  display: flex;
+  justify-content: space-around;
+
+  padding: 1rem;
+  width: 100%;
+}
+
+.socialIcons {
+  margin-right: 7rem;
+}
+
+.socialIcons img {
+  height: 15px;
+  margin-right: 1rem;
+  width: 25px;
+}
+
+.copyright {
+  font-size: 12px;
+  margin: 0 0 0 40rem;
+}

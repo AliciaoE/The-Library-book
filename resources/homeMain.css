@@ -1,0 +1,109 @@
+.wrapper {
+  background-color: #fff;
+  border-radius: 0.625rem;
+  margin: 5.5rem auto;
+  max-width: 1200px;
+  padding: 2rem 4rem;
+}
+
+.wrapper h1 {
+  font-size: 1.8753rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.title-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.add-button {
+  align-items: center;
+}
+
+.add-link {
+  align-items: center;
+  color: var(--primary-dark);
+  display: flex;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.bookCover {
+  height: 10rem;
+  width: 6.25rem;
+}
+
+.bookCover img {
+  height: 100%;
+  width: 100%;
+}
+
+.bookGrid {
+  display: grid;
+  gap: 0.625rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 3rem auto 2rem;
+}
+
+.bookCard {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.bookInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: auto;
+  justify-content: center;
+}
+
+.bookCard h3 {
+  color: var(--primary-dark);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  margin: 0;
+  text-align: center;
+}
+
+.bookCard p {
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+
+.pagination,
+.icons-row,
+.add-button {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.pagination {
+  justify-content: flex-end;
+}
+
+.pagination button {
+  background-color: transparent;
+  border: none;
+  color: var(--primary-dark);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration-line: underline;
+}
