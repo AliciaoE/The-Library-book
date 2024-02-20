@@ -64,7 +64,7 @@ $totalPages = ceil($totalBooks / 10);
                            <!-- Admin case:-->
                             <?php if ($isAdmin) : ?> 
                             <div class="icons-row">
-                                <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/edit-icon.svg" alt="Edit"></a>
+                                <a href="/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/edit-icon.svg" alt="Edit"></a>
 
                                 <a href="components/bookform.php?id=<?= $book['id'] ?>"><img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/delete-icon.svg" alt="Delete"></a>
                             </div>

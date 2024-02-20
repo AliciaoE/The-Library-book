@@ -9,7 +9,7 @@ use Src\Models\UserModel;
 class UserModelTest extends TestCase
 {
 
-    public function testUserModelClassExists() //verififa si cla clase UserMdel Existe
+    public function testUserModelClassExists() //verififa si clase UserMdel Existe
     {
         $this->assertTrue(
             class_exists('Model\UserModel'),
