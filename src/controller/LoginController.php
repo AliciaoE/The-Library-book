@@ -22,7 +22,7 @@ class LoginController
             if (!empty($username) && !empty($password)) {
                 if ($this->model->login($username, $password)) {
                     // Contraseña correcta
-                    echo "<script>alert('password Ok.');</script>";
+                    echo "<script>alert('You are now logged in. Welcome!');</script>";
                 } 
             }
         }

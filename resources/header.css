@@ -44,10 +44,11 @@
     color:inherit;
 }
 
-.login span {
+.login a {
     color: #333;
     font-weight: bold;
     font-size: 1.2rem; 
+    text-decoration: none;
 }
 
 .loginIcon {

@@ -13,9 +13,8 @@
 
     $isLoggedIn = isset($_SESSION['last_name']);
 ?>
-<nav>
-    <ul>
-        <li>
+<div class="login">
+<img src="<?= $_ENV['DOMAIN'] ?>The-Library-book/assets/images/user-icon.svg" alt="user">
             <?php if ($isLoggedIn): ?>
                 <a href="#" onclick="confirmLogout()">Logout</a>
                 <script>
@@ -30,9 +29,7 @@
                 
                 <a href="src/view/formView.php">Login</a>
             <?php endif; ?>
-        </li>
-    </ul>
-</nav>
+</div>
 
 
     </div>
